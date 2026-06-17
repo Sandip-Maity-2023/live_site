@@ -1,2 +1,8 @@
 https://advanceddevelopment-5yzkdbhpswjca4zvggebhn.streamlit.app/
 
+PORT=5000
+API_SENDGRID=xxSG.xmSB65GJQRuw8uRxi2jPxw.HmXovc1lJKiX2V6YAckI1MLEPTT2DFt9P0PdlaLqTUcxx
+
+EMAIL_USER=xx12sandip125@gmail.comxx
+EMAIL_PASS=xxssmtwqhvvnaewwfsxx
+xx
