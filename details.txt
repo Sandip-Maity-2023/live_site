@@ -6,3 +6,8 @@ API_SENDGRID=xxSG.xmSB65GJQRuw8uRxi2jPxw.HmXovc1lJKiX2V6YAckI1MLEPTT2DFt9P0PdlaL
 EMAIL_USER=xx12sandip125@gmail.comxx
 EMAIL_PASS=xxssmtwqhvvnaewwfsxx
 xx
+
+in root directory
+git add .
+git commit -m "Add MERN portfolio project"
+git push origin main
