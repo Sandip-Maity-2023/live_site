@@ -1,0 +1,208 @@
+/* =========================
+CONTACT SECTION
+========================= */
+
+.contact {
+  padding: 80px 1%;
+  min-height: 100vh;
+  background: linear-gradient(
+    150deg,
+    #0646db 0%,
+    #081a41 50%,
+    #000308 100%
+  );
+  color: #ffffff;
+  width : 100%;
+  
+}
+
+
+.card0 {
+  background: transparent;
+}
+
+.card1,
+.card2 {
+  background: transparent;
+}
+
+/* =========================
+IMAGE
+========================= */
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.15);
+}
+
+/* =========================
+FORM CONTAINER
+========================= */
+
+.card2 {
+  background: rgba(237, 226, 226, 0.06) !important;
+  /* backdrop-filter: blur(12px); */
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+SOCIAL ICONS
+========================= */
+
+.card2 h6 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.card2 svg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card2 svg:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+DIVIDER
+========================= */
+
+.line {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  flex: 1;
+}
+
+.or {
+  color: #9ca3af;
+  padding: 0 15px;
+  font-weight: 600;
+}
+
+/* =========================
+INPUTS
+========================= */
+
+.card2 input,
+.card2 textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.card2 input::placeholder,
+.card2 textarea::placeholder {
+  color: #cbd5e1;
+}
+
+.card2 input:focus,
+.card2 textarea:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+}
+
+.card2 textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #2563eb
+  ) !important;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.contact {
+  margin-left: 100px;
+  padding: 80px 40px;
+}
+
+/* =========================
+DEFAULT (Desktop)
+========================= */
+
+.contact {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+/* =========================
+Laptop / Tablet
+========================= */
+
+@media (max-width: 992px) {
+  .contact {
+    padding: 60px 30px;
+  }
+
+  .image {
+    margin-bottom: 30px;
+  }
+}
+
+/* =========================
+Tablet
+========================= */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 50px 20px;
+  }
+
+  .card2 {
+    padding: 25px !important;
+  }
+
+  .card2 h6 {
+    text-align: center;
+  }
+}
+
+/* =========================
+Mobile
+========================= */
+
+@media (max-width: 576px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .card2 {
+    padding: 20px !important;
+  }
+
+  .card2 h6 {
+    font-size: 1rem;
+  }
+}
