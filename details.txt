@@ -11,3 +11,5 @@ in root directory
 git add .
 git commit -m "Add MERN portfolio project"
 git push origin main
+
+npm install gh-pages --save-dev
