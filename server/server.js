@@ -66,10 +66,9 @@ app.get("/api-status", (req, res) => {
 // Serve frontend static assets from the client dist folder (Vite outputs to 'dist', not 'build')
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-// Fallback route: Route everything else to React's index.html
-// CHANGED: "*" to "(.*)" to support Express v5 routing syntax
-// Fallback route: Route everything else to React's index.html
-app.get(/.*/, (req, res) => {
+// 3. Fallback route: Using Express 5 compliant Named Splat syntax
+// This safely handles frontend navigation/routing refreshes without conflicting with your POST APIs
+app.get("{*splat}", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
