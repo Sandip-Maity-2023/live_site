@@ -68,7 +68,8 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 
 // Fallback route: Route everything else to React's index.html
 // CHANGED: "*" to "(.*)" to support Express v5 routing syntax
-app.get("(.*)", (req, res) => {
+// Fallback route: Route everything else to React's index.html
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
