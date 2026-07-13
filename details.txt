@@ -21,3 +21,12 @@ https://live-site-6.onrender.com
 
 npm run build
 npm run start
+
+https://live-site-ih6vqhzzf-sandip-maity-2023s-projects.vercel.app/
+https://vercel.com/sandip-maity-2023s-projects/live-site
+https://gemini.google.com/app/30526839f2a1d8dc?utm_source=sem&utm_medium=paid-media&utm_campaign=q4enIN_sem7&gclid=CjwKCAiAgeeqBhBAEiwAoDDhny6plvJCSiefJQUEKdJA5-2hH_bF1x3biNPjDptemijd9uCE53UkIxoCTeAQAvD_BwE
+https://live-site-6.onrender.com/
+https://live-site-6.onrender.com/
+https://dashboard.render.com/web/srv-d9aen84s728c73eknfng/deploys/dep-d9ag7qo1juns73e95pu0?r=2026-07-13%4015%3A26%3A40%7E2026-07-13%4015%3A29%3A36
+https://vercel.com/sandip-maity-2023s-projects/~/settings/environment-variables
+http://localhost:5173/
