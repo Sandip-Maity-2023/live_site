@@ -63,13 +63,13 @@ app.get("/api-status", (req, res) => {
   res.send("Portfolio API Running");
 });
 
-// Serve frontend static assets from the client build folder
-// (Using '../client/build' because server.js is inside the /server directory)
-app.use(express.static(path.join(__dirname, "../client/build")));
+// Serve frontend static assets from the client dist folder (Vite outputs to 'dist', not 'build')
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 // Fallback route: Route everything else to React's index.html
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+// CHANGED: "*" to "(.*)" to support Express v5 routing syntax
+app.get("(.*)", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
 // port
