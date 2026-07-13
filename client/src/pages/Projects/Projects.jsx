@@ -6,33 +6,39 @@ import "./Projects.css";
 const projects = [
   {
     id: 1,
-    title: "Research Mind",
-    type: "Multi-Agent AI Research Assistant",
-    tech: ["LangChain", "RAG", "AstraDB", "Streamlit"],
-    image:
-      "https://res.cloudinary.com/dabmttnpz/image/upload/v1781027335/i3_io5mke.jpg",
-    github: "https://github.com/Sandip-Maity-2023/Advanced_Development/tree/main/multiAgent",
-    live: "https://advanceddevelopment-5yzkdbhpswjca4zvggebhn.streamlit.app/",
+    title: "FastMart",
+    type: "Ecommerce Web App",
+    tech: ["React", "Node.js", "Express", "MongoDB", "OpenAI API"],
+    image: "https://res.cloudinary.com/dabmttnpz/image/upload/v1783935948/ff_ukr6ke.png",
+    github: "https://github.com/Sandip-Maity-2023/Advanced_Development/tree/main/FastMart",
+    live: "https://fast2mart.vercel.app"
   },
   {
     id: 2,
-    title: "NewsSphere",
-    type: "Cross-Platform News Aggregator",
-    tech: ["React", "MongoDB", "Node.js", "Express"],
-    image:
-      "https://res.cloudinary.com/dabmttnpz/image/upload/v1781027336/i2_wxqd5k.jpg",
-    github: "https://github.com/Sandip-Maity-2023/Introduction-To-Web-Development/tree/main/NewsPaper",
-    live: "https://glistening-torrone-4e821f.netlify.app/",
+    title: "Research Mind",
+    type: "Multi-Agent AI Assistant",
+    tech: ["LangChain", "RAG", "AstraDB", "Streamlit"],
+    image: "https://res.cloudinary.com/dabmttnpz/image/upload/v1781027335/i3_io5mke.jpg",
+    github: "https://github.com/Sandip-Maity-2023/Advanced_Development/tree/main/multiAgent",
+    live: "https://advanceddevelopment-5yzkdbhpswjca4zvggebhn.streamlit.app",
   },
   {
     id: 3,
-    title: "AI-Based Cataract Detection System",
-    type: "Mobile app for cataract detection",
-    tech: ["React Native", "TypeScript", "Firebase","PyTorch"],
-    image:
-      "https://res.cloudinary.com/dabmttnpz/image/upload/v1781027335/i1_h99n5o.jpg",
+    title: "NewsSphere",
+    type: "News Aggregator",
+    tech: ["React", "MongoDB", "Node.js", "Express"],
+    image: "https://res.cloudinary.com/dabmttnpz/image/upload/v1781027336/i2_wxqd5k.jpg",
+    github: "https://github.com/Sandip-Maity-2023/Introduction-To-Web-Development/tree/main/NewsPaper",
+    live: "https://glistening-torrone-4e821f.netlify.app",
+  },
+  {
+    id: 4,
+    title: "Dristi-Scan",
+    type: "Cataract Detection App",
+    tech: ["React Native", "TypeScript", "Firebase", "PyTorch"],
+    image: "https://res.cloudinary.com/dabmttnpz/image/upload/v1781027335/i1_h99n5o.jpg",
     github: "https://github.com/Sandip-Maity-2023/Mini_Project",
-    live: "https://mini-project-mjx11f0dg-sandip-maity-2023s-projects.vercel.app/",
+    live: "https://mini-project-mjx11f0dg-sandip-maity-2023s-projects.vercel.app",
   },
 ];
 
@@ -63,16 +69,19 @@ const Projects = () => {
           <motion.div
             key={project.id}
             className="project-card"
-            whileHover={{ scale: 1.03 }}
-            transition={{ type: "spring", stiffness: 150 }}
-          >
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 200, damping: 15 }}>
+
+              {/* //the image section */}
             <div className="card-img-wrapper">
               <img src={project.image} alt={project.title} className="card-img" />
               <span className="badge">{project.type}</span>
             </div>
 
+              {/* //content section */}
             <div className="card-content">
-              <h4>{project.title}</h4>
+              <h3 className="project-title">{project.title}</h3>
+
               <div className="tech-tags">
                 {project.tech.map((tech, idx) => (
                   <span key={idx} className="tag">

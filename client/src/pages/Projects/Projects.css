@@ -39,10 +39,10 @@
   background: #c0e5f0;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: hidden; /* Clean cut-off boundary between the two sections */
   transition: transform 0.3s ease;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stacks Image wrapper (Top) and Card Content (Bottom) */
 }
 
 .project-card:hover {
@@ -54,6 +54,8 @@
   position: relative;
   height: 200px;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-img {
@@ -69,19 +71,20 @@
 
 .badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #f29f67;
+  top: 10px;
+  left: 10px;
+  background: #e5ece5;
   color: #000;
-  padding: 5px 12px;
+  padding: 10px 10px;
   border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 650;
 }
 
 .card-content {
   padding: 20px;
   flex: 1;
+  
 }
 
 .card-content h4 {
