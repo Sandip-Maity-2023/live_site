@@ -10,7 +10,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
-  // Handle form submit
+// Handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -19,18 +19,17 @@ const Contact = () => {
         return;
       }
 
-      // const res = await axios.post("http://localhost:5000/api/v1/portfolio/sendEmail", {
-      //   name,
-      //   email,
-      //   msg,
-      // });
-      const res=await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/portfolio/sendEmail`, {
+      // 1. Automatically detect if running locally or live on Render
+      const apiBaseURL = window.location.hostname === "localhost"
+        ? "http://localhost:5000"
+        : ""; // Empty string allows a relative path on Render
+
+      // 2. Make the request using our dynamic base URL
+      const res = await axios.post(`${apiBaseURL}/api/v1/portfolio/sendEmail`, {
         name,
         email,
         msg,
       });
-
-      // it is running on http not https because we are using localhost and not deployed server
 
       if (res.data.success) {
         toast.success(res.data.message);
@@ -45,6 +44,43 @@ const Contact = () => {
       toast.error("Something went wrong. Please try again later.");
     }
   };
+
+
+  // Handle form submit
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     if (!name || !email || !msg) {
+  //       toast.error("Please provide all fields");
+  //       return;
+  //     }
+
+  //     // const res = await axios.post("http://localhost:5000/api/v1/portfolio/sendEmail", {
+  //     //   name,
+  //     //   email,
+  //     //   msg,
+  //     // });
+  //     const res=await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/portfolio/sendEmail`, {
+  //       name,
+  //       email,
+  //       msg,
+  //     });
+
+  //     // it is running on http not https because we are using localhost and not deployed server
+
+  //     if (res.data.success) {
+  //       toast.success(res.data.message);
+  //       setname("");
+  //       setEmail("");
+  //       setMsg("");
+  //     } else {
+  //       toast.error(res.data.message);
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     toast.error("Something went wrong. Please try again later.");
+  //   }
+  // };
 
   return (
     <div className="contact" id="contact" >
